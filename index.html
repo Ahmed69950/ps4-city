@@ -6,7 +6,80 @@
   <title>متجر المدينة - صفحة التعديل</title>
   <!-- Bootstrap RTL -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    body {<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تعديل PS4 9.00 بدون فلاش</title>
+  <style>
     body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Tajawal', Tahoma, sans-serif;
+      text-align: center;
+      padding-top: 60px;
+    }
+
+    h1 {
+      color: #00ffff;
+      margin-bottom: 20px;
+    }
+
+    #progress-container {
+      width: 80%;
+      max-width: 400px;
+      margin: 30px auto;
+      background-color: #333;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    #progress-bar {
+      width: 0%;
+      height: 30px;
+      background-color: #00ffcc;
+      transition: width 0.2s;
+    }
+
+    #counterText {
+      margin-top: 15px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>مرحباً بك في متجر المدينة</h1>
+  <p>يتم الآن تجهيز التعديل... الرجاء الانتظار</p>
+
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+  <p id="counterText">0%</p>
+
+  <script>
+    let progress = 0;
+    const progressBar = document.getElementById('progress-bar');
+    const counterText = document.getElementById('counterText');
+
+    const interval = setInterval(() => {
+      if (progress >= 100) {
+        clearInterval(interval);
+        counterText.innerText = "✅ التعديل بدأ الآن...";
+        // هنا يتم تحويل المستخدم إلى صفحة التعديل الرسمية (بدون فلاش)
+        window.location.href = "https://sleirsgoevy.github.io/900-host/";
+      } else {
+        progress++;
+        progressBar.style.width = progress + '%';
+        counterText.innerText = progress + '%';
+      }
+    }, 50); // سرعة العد - يمكن تعديلها لو أردت
+  </script>
+
+</body>
+</html>
+
+  
   <body style="background-color:#111; color:white; font-family:Tahoma, sans-serif; text-align:center; padding:40px;">
 
   <p style="font-size:18px; color:#00ffcc; margin-bottom:10px;">
@@ -20,23 +93,7 @@
   <p style="font-size:18px; color:#ccc; margin-bottom:30px;">
     متجر مختص بتعديل أجهزة PS4 باحتراف وثقة
   </p>
-
-  <!-- زر بدء التعديل -->
-  <a href="https://sleirsgoevy.github.io/900-host/" target="_blank"
-     style="display:inline-block;background-color:#ff6600;color:white;
-            padding:12px 30px;margin:10px;border-radius:8px;
-            text-decoration:none;font-size:16px;">
-    🚀 ابدأ التعديل الآن (بدون فلاشة)
-  </a>
-
-  <!-- زر تحميل GoldHEN -->
-  <a href="https://github.com/GoldHEN/GoldHEN/releases/download/v2.4b18/GoldHEN_v2.4b18.zip" download
-     style="display:inline-block;background-color:#007bff;color:white;
-            padding:12px 30px;margin:10px;border-radius:8px;
-            text-decoration:none;font-size:16px;">
-    🔧 تحميل آخر إصدار من GoldHEN
-  </a>
-
+    
   <!-- زر واتساب -->
   <a href="https://wa.me/07858858844" target="_blank"
      style="display:inline-block;background-color:#25D366;color:white;
